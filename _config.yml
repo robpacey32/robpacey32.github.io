@@ -105,16 +105,16 @@ keywords: "hockey,analytics,nhl,data,visulisation"
 ######################################
 # --- Colours / background image --- #
 ######################################
-#### GOT TO HERE
+
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 navbar-col: "#EAEAEA"
-navbar-text-col: "#404040"
+navbar-text-col: "#3f8fcc"
 navbar-border-col: "#DDDDDD"
-page-col: "#FFFFFF"
+page-col: "#e7f1f9"
 text-col: "#404040"
-link-col: "#008AFF"
-hover-col: "#0085A1"
+link-col: "#004f93"
+hover-col: "#e7f1f9"
 footer-col: "#EAEAEA"
 footer-text-col: "#777777"
 footer-link-col: "#404040"
@@ -141,7 +141,7 @@ footer-hover-col: "#0085A1"
 #################################
 # --- Web Analytics Section --- #
 #################################
-
+#### GOT TO HERE
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
 #gtag: "G-XXXXXXXXXX"
 
