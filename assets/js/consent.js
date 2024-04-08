@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     var acceptCookiesButton = document.getElementById("accept-cookies");
-    var cookieConsentBanner = document.getElementById("cookie-consent-banner");
+    var cookieConsentBanner = document.getElementById("cookie-consent-dialog");
 
     acceptCookiesButton.addEventListener("click", function() {
         // Set a cookie to remember user's consent preference
