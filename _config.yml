@@ -109,7 +109,7 @@ keywords: "hockey,analytics,nhl,data,visulisation"
 # Personalize the colours in your website. Colour values can be any valid CSS colour
 
 navbar-col: "#EAEAEA"
-navbar-text-col: "#3f8fcc"
+navbar-text-col: "#404040"
 navbar-border-col: "#DDDDDD"
 page-col: "#e7f1f9"
 text-col: "#404040"
