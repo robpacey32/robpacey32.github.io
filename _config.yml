@@ -143,9 +143,8 @@ footer-hover-col: "#FFFFFF"
 #################################
 # --- Web Analytics Section --- #
 #################################
-#### GOT TO HERE
 # Fill in your Google Analytics tag ID (or "Measurement ID") to track your website usage
-#gtag: "G-XXXXXXXXXX"
+gtag: "G-J2C9X7Y3BX"
 
 # Fill in your Cloudflare Analytics beacon token to track your website using Cloudflare Analytics
 #cloudflare_analytics: ""
