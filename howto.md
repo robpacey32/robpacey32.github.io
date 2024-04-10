@@ -11,9 +11,10 @@ The main things I wanted to achieve was a table with all actions.  For every sho
 
 ### Pulling the data
 There are many different ways to do this.  My preference is to run python script in JupyterLab within Anaconda:
-<div style="text-align:center;">![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png)</div>
+![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
 
-
+You can then open a notebook:
+![AnacondaScreenshot2](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
 
 
 
