@@ -15,19 +15,10 @@ There are many different ways to do this.  My preference is to run python script
 ![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
 
 You can then open a notebook:
-![AnacondaScreenshot2](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
+![AnacondaScreenshot2](/assets/img/AnacondaScreenshot2.png){: .mx-auto.d-block :}
 
 ### The Code
 First things first, we need to import some libraries:
-
-~~~
-import requests
-import pandas as pd
-import datetime as dt
-from datetime import datetime, timedelta
-import json
-import os
-~~~
 
 ```python
 import requests
