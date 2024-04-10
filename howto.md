@@ -12,6 +12,25 @@ The main things I wanted to achieve was a table with all actions.  For every sho
 ### Pulling the data
 There are many different ways to do this.  My preference is to run python script in JupyterLab within Anaconda:
 
+![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
 
+
+Here's a code chunk:
+
+~~~
+var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+~~~
+
+And here is the same code with syntax highlighting:
+
+```javascript
+var foo = function(x) {
+  return(x + 5);
+}
+foo(3)
+```
 
 ####  #32
