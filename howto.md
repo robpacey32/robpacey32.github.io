@@ -13,6 +13,11 @@ The main things I wanted to achieve was a table with all actions.  For every sho
 There are many different ways to do this.  My preference is to run python script in JupyterLab within Anaconda:
 <div style="text-align:center;">![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png)</div>
 
+
+
+
+
+
 Here's a code chunk:
 
 ~~~
