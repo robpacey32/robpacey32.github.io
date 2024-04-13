@@ -83,6 +83,8 @@ Possible variables include:
 | summaryshooting | percentages | scoretrailfirst | shootout | shottype | 
 | goalgames |  |  |  |  | 
 
+</div>
+
 ## Roster Information
 To pull all teams roster information, we need a list of the team codes:
 
