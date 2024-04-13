@@ -115,7 +115,7 @@ navbar-border-col: "#1F4560"
 page-col: "#e7f1f9"
 text-col: "#404040"
 link-col: "#004f93"
-hover-col: "#e7f1f9"
+hover-col: "##8097a9"
 
 footer-col: "#16537E"
 footer-text-col: "#FFFFFF"
@@ -133,12 +133,14 @@ footer-hover-col: "#FFFFFF"
 #mobile-theme-col: "#0085A1"
 
 # For any extra visual customization, you can include additional CSS files in every page on your site. List any custom CSS files here
-#site-css:
+site-css:
 #  - "/assets/css/custom-styles.css"
+  - "/assets/css/consent-banner.css"
 
 # If you have common JavaScript files that should be included in every page, list them here
-#site-js:
+site-js:
 #  - "/assets/js/custom-script.js"
+  - "/assets/js/consent.js"
 
 #################################
 # --- Web Analytics Section --- #
