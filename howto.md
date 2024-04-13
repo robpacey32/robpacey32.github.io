@@ -5,19 +5,19 @@ subtitle: A guide to everything I've tried to do
 ---
 
 
-### Intro
+# Intro
 The first thing you need when wanting to look at NHL data is NHL data.  Unfortunately there isn't too much documentation, but there is an API and resources (like [https://github.com/Zmalski/NHL-API-Reference](https://github.com/Zmalski/NHL-API-Reference)) which help along the way.
 
 The main things I wanted to achieve was a table with all actions.  For every shot, hit, goal etc. I wanted a table with all of the possible informatiion.  This could then be supplemented with standings information, roster information etc.
 
-### Set Up
+# Set Up
 There are many different ways to do this.  My preference is to run python script in JupyterLab within Anaconda:
 ![AnacondaScreenshot](/assets/img/AnacondaScreenshot.png){: .mx-auto.d-block :}
 
 You can then open a notebook:
 ![AnacondaScreenshot2](/assets/img/AnacondaScreenshot2.png){: .mx-auto.d-block :}
 
-### The Code
+# The Code
 
 ## Set Up
 First, we need to import some libraries:
@@ -37,6 +37,7 @@ In the next cell, I like to create my variables.  The two I need are one for if 
 one_season_sel = 20202021
 from_season_sel = 20122013
 ```
+
 
 ## Team Information
 The first element I pulled was the team information in the NHL API:
@@ -80,6 +81,7 @@ Possible variables include:
 | penalties | penaltykill | penaltykilltime | powerplay | powerplaytime | 
 | summaryshooting | percentages | scoretrailfirst | shootout | shottype | 
 | goalgames |  |  |  |  | 
+
 
 
 ## Roster Information
@@ -388,6 +390,8 @@ for index, row in df_dts.iterrows():
 df_standings = pd.DataFrame(standings_data_list)
 ```
 
+
+
 ## Game Action Information
 The final set of data we can pull is the most important - the data for every action that occured in every game we specify.  This can take some time to run so I opted to run this on a season-by-season basis.  But you can pull this for specific games if you so choose:
 
@@ -505,6 +509,8 @@ for index, row in df_gameIDs.iterrows():
 GameAction_BasicInfo = pd.DataFrame(all_basic_info)
 GameAction_Plays = pd.DataFrame(all_plays_info)
 ```
+
+# Conclusion
 
 This puts all the data into dataframes.  You can then export or work the data however you wish.  I chose to output this data to csv (old school) and work from there.
 
