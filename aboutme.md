@@ -17,7 +17,6 @@ subtitle: Rob Pacey
 10. Life is never as bad as you think it is, but it's never as good either
 
 <div style="text-align:right;">
-
-####  #32
-
+    <h4 style="display:inline-block;">#32</h4>
 </div>
+
