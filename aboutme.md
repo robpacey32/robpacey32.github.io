@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_withupdate
 title: About me
 subtitle: Rob Pacey
 ---
