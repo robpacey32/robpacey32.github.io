@@ -4,15 +4,6 @@ layout: base
 
 {% include header.html type="page" %}
 
-<style>
-  /* Custom CSS to make the main container wider for this specific layout */
-  .container {
-/*    max-width: 1200px; /* Adjust the maximum width as needed */
-    padding-left: 20px; /* Add left margin of 20px */
-    padding-right: 20px; /* Add right margin of 20px */
-  }
-</style>
-
 <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
   <div class="row">
     <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
