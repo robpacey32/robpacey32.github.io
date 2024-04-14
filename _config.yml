@@ -235,7 +235,7 @@ date_format: "%B %-d, %Y"
 #################################################################################
 
 # Output options (more information on Jekyll's site)
-timezone: "America/Toronto"
+timezone: "Europe/London"
 markdown: kramdown
 highlighter: rouge
 permalink: /:year-:month-:day-:title/
@@ -279,10 +279,8 @@ plugins:
 last_modified_at:
   enabled: true
   files:
-    - "**/*.html"
-    - "**/*.md"
-    - "**/*.markdown"
-
+    - "aboutme.md"
+    - "howto.md"
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
