@@ -10,7 +10,7 @@ Embed dashboard check:
 <div style="text-align: center;">
   <iframe src="https://public.tableau.com/views/ExpectedSavePercentage/Dashboard1?:showVizHome=no&:embed=true" 
           width="100%" 
-          height="800" 
+          height="100%" 
           frameborder="0" 
           scrolling="no"></iframe>
 </div>
