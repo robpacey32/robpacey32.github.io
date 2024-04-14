@@ -16,7 +16,9 @@ subtitle: Rob Pacey
 9. I believe data makes everything better
 10. Life is never as bad as you think it is, but it's never as good either
 
-<div style="text-align:right;">
-    <h4 style="display:inline-block;">#32</h4>
-</div>
 
+
+<div style="text-align:right;">
+  <h4 style="display:inline-block; margin-bottom: 0;">#32</h4><br>
+  <span style="font-size: small;">Last Updated: 2024-04-14</span>
+</div>
