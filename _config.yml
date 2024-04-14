@@ -24,7 +24,7 @@ navbar-links:
     - Dashboards: "dashboards"
     - Analytics: "analytics"
     - How To: "howto"
-    About Me: "aboutme"
+  About Me: "aboutme"
 
 ################
 # --- Logo --- #
