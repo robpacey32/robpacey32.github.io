@@ -1,7 +1,7 @@
 ---
 layout: page_withupdate
-title: About me
-subtitle: Rob Pacey
+title: Rob Pacey
+subtitle: About Me
 ---
 
 10 things to know about me:
