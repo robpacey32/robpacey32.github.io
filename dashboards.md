@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_marginfordashboard
 title: Dashboards
 # subtitle: Rob Pacey
 ---
