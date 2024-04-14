@@ -6,9 +6,13 @@ title: Dashboards
 
 Embed dashboard check:
 
-{% raw %}
-<iframe src="https://public.tableau.com/views/ExpectedSavePercentage/Dashboard1?:showVizHome=no&:embed=true" width="1500" height="1200" frameborder="0"></iframe>
-{% endraw %}
+<div style="text-align: center;">
+  <iframe src="https://public.tableau.com/views/ExpectedSavePercentage/Dashboard1?:showVizHome=no&:embed=true" 
+          width="100%" 
+          height="800" 
+          frameborder="0" 
+          scrolling="no"></iframe>
+</div>
 
 <br>
 <br>
