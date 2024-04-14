@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: page_withupdate
 title: How To
 subtitle: A guide to everything I've tried to do
 ---
