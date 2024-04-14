@@ -10,7 +10,12 @@ Embed dashboard check:
 <iframe src="https://public.tableau.com/views/ExpectedSavePercentage/Dashboard1?:showVizHome=no&:embed=true" width="1500" height="1200" frameborder="0"></iframe>
 {% endraw %}
 
+<br>
+<br>
+<br>
 
 <div style="text-align:right;">
-    <h4 style="display:inline-block;">#32</h4>
+  <h4 style="display:inline-block; margin-bottom: 0;">#32</h4><br>
+  <br>
+  <span style="font-size: small;">Last Updated: 2024-04-14</span>
 </div>
