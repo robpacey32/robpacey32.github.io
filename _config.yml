@@ -20,11 +20,11 @@ author: Pacey32
 ###############################################
 
 navbar-links:
-  About Me: "aboutme"
   Resources:
     - Dashboards: "dashboards"
     - Analytics: "analytics"
     - How To: "howto"
+    About Me: "aboutme"
 
 ################
 # --- Logo --- #
@@ -225,7 +225,7 @@ gtm: "GTM-MJRVCW4Q"
 ################
 
 # Ruby Date Format to show dates of posts
-date_format: "%B %-d, %Y"
+date_format: "%-d, %B, %Y"
 
 # Facebook App ID
 #fb_app_id: ""
