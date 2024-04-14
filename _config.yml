@@ -13,7 +13,7 @@
 title: Pacey32 - Hockey Analytics Hub
 
 # Your name to show in the footer
-author: Rob Pacey
+author: Pacey32
 
 ###############################################
 # --- List of links in the navigation bar --- #
@@ -120,7 +120,7 @@ hover-col: "##8097a9"
 footer-col: "#16537E"
 footer-text-col: "#FFFFFF"
 footer-link-col: "#404040"
-footer-hover-col: "#FFFFFF"
+footer-hover-col: "#8097a9"
 
 # Alternatively, the navbar, footer, and page background can be set to an image
 # instead of colour
