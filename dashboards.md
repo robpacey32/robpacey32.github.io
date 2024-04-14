@@ -1,6 +1,7 @@
 ---
 layout: page_marginfordashboard
 title: Dashboards
+full-width: true
 # subtitle: Rob Pacey
 ---
 
