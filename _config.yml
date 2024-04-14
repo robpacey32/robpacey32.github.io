@@ -276,11 +276,11 @@ plugins:
   - jekyll-sitemap
   - jekyll-last-modified-at
 
-last_modified_at:
-  enabled: true
-  files:
-    - "aboutme.md"
-    - "howto.md"
+#last_modified_at:
+#  enabled: true
+#  files:
+#    - "aboutme.md"
+#    - "howto.md"
 
 # Beautiful Jekyll / Dean Attali
 # 2fc73a3a967e97599c9763d05e564189
