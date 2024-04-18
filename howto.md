@@ -117,7 +117,7 @@ You will notice the final line here is where we can limit which seasons we run t
 
 We can then pull the roster data for these seasons:
 ```python
-# Initialize empty lists to store player data
+# Initialize lists to store data
 forward_data = []
 defensemen_data = []
 goalies_data = []
@@ -135,75 +135,75 @@ for index, row in df_rosterseasons_forloop.iterrows():
     roster_data = response.json()
 
     # Loop through forwards and extract relevant information
-    for forward in roster_data['forwards']:
+    for forward in roster_data.get('forwards', []):
         forward_info = {
             'triCode': tri_code,
             'season': season,
-            'playerID': forward['id'],
-            'player_name': forward['firstName']['default'] + ' ' + forward['lastName']['default'],
+            'playerID': forward.get('id', None),
+            'player_name': forward.get('firstName', {}).get('default', '') + ' ' + forward.get('lastName', {}).get('default', ''),
             'sweater_number': forward.get('sweaterNumber', 'N/A'),
-            'position': forward['positionCode'],
-            'shoots_catches': forward['shootsCatches'],
-            'height_cm': forward['heightInCentimeters'],
-            'weight_kg': forward['weightInKilograms'],
-            'height_in': forward['heightInInches'],
-            'weight_lbs': forward['weightInPounds'],
-            'birth_date': forward['birthDate'],
-            'birth_city': forward['birthCity']['default'],
-            'birth_country': forward['birthCountry'],
-            'headshot_url': forward['headshot']
+            'position': forward.get('positionCode', ''),
+            'shoots_catches': forward.get('shootsCatches', ''),
+            'height_cm': forward.get('heightInCentimeters', ''),
+            'weight_kg': forward.get('weightInKilograms', ''),
+            'height_in': forward.get('heightInInches', ''),
+            'weight_lbs': forward.get('weightInPounds', ''),
+            'birth_date': forward.get('birthDate', ''),
+            'birth_city': forward.get('birthCity', {}).get('default', ''),
+            'birth_country': forward.get('birthCountry', ''),
+            'headshot_url': forward.get('headshot', '')
         }
         forward_data.append(forward_info)
 
     # Loop through defence and extract relevant information
-    for defensemen in roster_data['defensemen']:
+    for defensemen in roster_data.get('defensemen', []):
         defensemen_info = {
             'triCode': tri_code,
             'season': season,
-            'playerID': defensemen['id'],
-            'player_name': defensemen['firstName']['default'] + ' ' + defensemen['lastName']['default'],
+            'playerID': defensemen.get('id', None),
+            'player_name': defensemen.get('firstName', {}).get('default', '') + ' ' + defensemen.get('lastName', {}).get('default', ''),
             'sweater_number': defensemen.get('sweaterNumber', 'N/A'),
-            'position': defensemen['positionCode'],
-            'shoots_catches': defensemen['shootsCatches'],
-            'height_cm': defensemen['heightInCentimeters'],
-            'weight_kg': defensemen['weightInKilograms'],
-            'height_in': defensemen['heightInInches'],
-            'weight_lbs': defensemen['weightInPounds'],
-            'birth_date': defensemen['birthDate'],
-            'birth_city': defensemen['birthCity']['default'],
-            'birth_country': defensemen['birthCountry'],
-            'headshot_url': defensemen['headshot']
+            'position': defensemen.get('positionCode', ''),
+            'shoots_catches': defensemen.get('shootsCatches', ''),
+            'height_cm': defensemen.get('heightInCentimeters', ''),
+            'weight_kg': defensemen.get('weightInKilograms', ''),
+            'height_in': defensemen.get('heightInInches', ''),
+            'weight_lbs': defensemen.get('weightInPounds', ''),
+            'birth_date': defensemen.get('birthDate', ''),
+            'birth_city': defensemen.get('birthCity', {}).get('default', ''),
+            'birth_country': defensemen.get('birthCountry', ''),
+            'headshot_url': defensemen.get('headshot', '')
         }
         defensemen_data.append(defensemen_info)
 
     # Loop through goalies and extract relevant information
-    for goalies in roster_data['goalies']:
+    for goalies in roster_data.get('goalies', []):
         goalies_info = {
             'triCode': tri_code,
             'season': season,
-            'playerID': goalies['id'],
-            'player_name': goalies['firstName']['default'] + ' ' + goalies['lastName']['default'],
+            'playerID': goalies.get('id', None),
+            'player_name': goalies.get('firstName', {}).get('default', '') + ' ' + goalies.get('lastName', {}).get('default', ''),
             'sweater_number': goalies.get('sweaterNumber', 'N/A'),
-            'position': goalies['positionCode'],
-            'shoots_catches': goalies['shootsCatches'],
-            'height_cm': goalies['heightInCentimeters'],
-            'weight_kg': goalies['weightInKilograms'],
-            'height_in': goalies['heightInInches'],
-            'weight_lbs': goalies['weightInPounds'],
-            'birth_date': goalies['birthDate'],
-            'birth_city': goalies['birthCity']['default'],
-            'birth_country': goalies['birthCountry'],
-            'headshot_url': goalies['headshot']
+            'position': goalies.get('positionCode', ''),
+            'shoots_catches': goalies.get('shootsCatches', ''),
+            'height_cm': goalies.get('heightInCentimeters', ''),
+            'weight_kg': goalies.get('weightInKilograms', ''),
+            'height_in': goalies.get('heightInInches', ''),
+            'weight_lbs': goalies.get('weightInPounds', ''),
+            'birth_date': goalies.get('birthDate', ''),
+            'birth_city': goalies.get('birthCity', {}).get('default', ''),
+            'birth_country': goalies.get('birthCountry', ''),
+            'headshot_url': goalies.get('headshot', '')
         }
         goalies_data.append(goalies_info)
         
-# Create a DataFrame for forwards
+# Create DataFrames for forwards, defensemen, and goalies
 df_forwards = pd.DataFrame(forward_data)
-df_defence = pd.DataFrame(defensemen_data)
+df_defense = pd.DataFrame(defensemen_data)
 df_goalies = pd.DataFrame(goalies_data)
 
 # Union all of the data together
-df_roster = pd.concat([df_forwards, df_defence, df_goalies], ignore_index=True)
+df_roster = pd.concat([df_forwards, df_defense, df_goalies], ignore_index=True)
 ```
 
 ## Schedule Information
@@ -424,39 +424,38 @@ for index, row in df_gameIDs.iterrows():
         'gameType': action_data.get('gameType', 'n/a'),
         'gameDate': action_data.get('gameDate', 'n/a'),
         'venue': action_data.get('venue', {}).get('default', 'n/a'),
-        'neutralSite': game.get('neutralSite', 'n/a'),
+        'neutralSite': action_data.get('neutralSite', 'n/a'),
         'startTimeUTC': action_data.get('startTimeUTC', 'n/a'),
         'easternUTCOffset': action_data.get('easternUTCOffset', 'n/a'),
         'venueUTCOffset': action_data.get('venueUTCOffset', 'n/a'),
-        'venueTimezone': game.get('venueTimezone', 'n/a'),
+        'venueTimezone': action_data.get('venueTimezone', 'n/a'),
         'gameState': action_data.get('gameState', 'n/a'),
         'gameScheduleState': action_data.get('gameScheduleState', 'n/a'),
         'period': action_data.get('period', 'n/a'),
         'periodDescriptor_number': action_data.get('periodDescriptor', {}).get('number', 'n/a'),
         'periodDescriptor_periodType': action_data.get('periodDescriptor', {}).get('periodType', 'n/a'),
-        'away_id': action_data['awayTeam'].get('id', 'n/a'),
-        'away_name': action_data['awayTeam']['name'].get('default') if isinstance(action_data['awayTeam'], dict) else action_data['awayTeam'],
-        'away_abbrev': action_data['awayTeam'].get('abbrev', 'n/a'),
-        'awayTeamPlaceName': action_data['awayTeam'].get('placeName', {}).get('default', 'n/a'),
-        'away_score': action_data['awayTeam'].get('score', 'n/a'),
-        'away_sog': action_data['awayTeam'].get('sog', 'n/a'),
-        'away_logo': action_data['awayTeam'].get('logo', 'n/a'),
-        'home_id': action_data['homeTeam'].get('id', 'n/a'),
-        'home_name': action_data['homeTeam']['name'].get('default') if isinstance(action_data['homeTeam'], dict) else action_data['homeTeam'],
-        'home_abbrev': action_data['homeTeam'].get('abbrev', 'n/a'),
-        'homeTeamPlaceName': action_data['homeTeam'].get('placeName', {}).get('default', 'n/a'),
-        'home_score': action_data['homeTeam'].get('score', 'n/a'),
-        'home_sog': action_data['homeTeam'].get('sog', 'n/a'),
-        'home_logo': action_data['homeTeam'].get('logo', 'n/a'),
-        'timeRemaining': action_data['clock'].get('timeRemaining', 'n/a'),
-        'secondsRemaining': action_data['clock'].get('secondsRemaining', 'n/a'),
-        'running': action_data['clock'].get('running', 'n/a'),
-        'inIntermission': action_data['clock'].get('inIntermission', 'n/a'),
+        'away_id': action_data.get('awayTeam', {}).get('id', 'n/a'),
+        'away_name': action_data.get('awayTeam', {}).get('name', {}).get('default', 'n/a'),
+        'away_abbrev': action_data.get('awayTeam', {}).get('abbrev', 'n/a'),
+        'awayTeamPlaceName': action_data.get('awayTeam', {}).get('placeName', {}).get('default', 'n/a'),
+        'away_score': action_data.get('awayTeam', {}).get('score', 'n/a'),
+        'away_sog': action_data.get('awayTeam', {}).get('sog', 'n/a'),
+        'away_logo': action_data.get('awayTeam', {}).get('logo', 'n/a'),
+        'home_id': action_data.get('homeTeam', {}).get('id', 'n/a'),
+        'home_name': action_data.get('homeTeam', {}).get('name', {}).get('default', 'n/a'),
+        'home_abbrev': action_data.get('homeTeam', {}).get('abbrev', 'n/a'),
+        'homeTeamPlaceName': action_data.get('homeTeam', {}).get('placeName', {}).get('default', 'n/a'),
+        'home_score': action_data.get('homeTeam', {}).get('score', 'n/a'),
+        'home_sog': action_data.get('homeTeam', {}).get('sog', 'n/a'),
+        'home_logo': action_data.get('homeTeam', {}).get('logo', 'n/a'),
+        'timeRemaining': action_data.get('clock', {}).get('timeRemaining', 'n/a'),
+        'secondsRemaining': action_data.get('clock', {}).get('secondsRemaining', 'n/a'),
+        'running': action_data.get('clock', {}).get('running', 'n/a'),
+        'inIntermission': action_data.get('clock', {}).get('inIntermission', 'n/a'),
         'periodType': action_data.get('periodDescriptor', {}).get('periodType', 'n/a'),
         'gameOutcome_lastPeriodType': action_data.get('gameOutcome', {}).get('lastPeriodType', 'n/a')
     }
     all_basic_info.append(basic_info)
-
 
     # Extracting 'plays' data
     plays_data = action_data.get('plays', []) 
