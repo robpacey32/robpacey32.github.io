@@ -2,6 +2,12 @@
 layout: page
 ---
 
+{% if page.url == '/' %}
+<div class="homepage-image">
+    <img src="{{ '/assets/img/Header.png' | relative_url }}" alt="Homepage Image" />
+</div>
+{% endif %}
+
 {{ content }}
 
 {% assign posts = paginator.posts | default: site.posts %}
