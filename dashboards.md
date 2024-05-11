@@ -6,7 +6,8 @@ full-width: true
 ---
 
 
-NHL Standings Editor:
+<b>NHL Standings Editor:</b>
+
 <div style="text-align: center; height: 100vh;">
   <iframe src="https://public.tableau.com/views/NHLStandings_17134787057030/NHLStandings?:showVizHome=no&:embed=true"
           width="100%" 
@@ -15,7 +16,7 @@ NHL Standings Editor:
           scrolling="no"></iframe>
 </div>
 
-Embed dashboard check:
+<b>Expected Goals Against:</b>
 
 <div style="text-align: center; height: 100vh;">
   <iframe src="https://public.tableau.com/views/ExpectedSavePercentage/Dashboard1?:showVizHome=no&:embed=true" 
