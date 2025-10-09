@@ -1,0 +1,73 @@
+/* hockey.css */
+body {
+    background-color: #003366; /* Blue background for hockey */
+    color: #FFFFFF;
+  }
+  
+  .hockey-section {
+    background-color: #003366; /* Lighter blue for the section */
+  }
+
+  .post-title {
+    color: #FFFFFF !important;
+  }
+
+  .post-subtitle {
+    color: #FFFFFF !important;
+  }
+
+  body {
+    font-family: 'Barlow', sans-serif !important;
+  }
+
+  .post-title {
+    letter-spacing: 1px;
+    line-height: 1.1;
+  }
+
+  .navbar {
+    background-color: #002244;
+  }
+  .navbar a {
+    color: #FFFFFF;
+  }
+  .navbar a:hover {
+    color: #FFD700;
+  }
+
+  .post-preview {
+    background-color: #002244;
+    padding: 1.5rem;
+    border-radius: 8px;
+    margin-bottom: 2rem;
+    box-shadow: 0 0 8px #002244;
+  }
+  .post-image img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  a {
+    color: #FFD700;
+  }
+  
+  a:hover {
+    color: #FFA500;
+    text-decoration: underline;
+  }
+
+
+  .footer {
+    background-color: #002244 !important; /* Darker navy */
+    color: #ffffff;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+  }
+  .footer a {
+    color: #FFD700; /* Gold */
+    text-decoration: none;
+  }
+  .footer a:hover {
+    text-decoration: underline;
+  }

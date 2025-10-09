@@ -1,0 +1,65 @@
+---
+layout: base
+---
+
+{% include header.html type="post" %}
+
+<head>
+  <!-- Other head content -->
+  <link rel="stylesheet" href="{% if page.url contains '/hockey/' %}{{ '/assets/css/hockey.css' | relative_url }}
+                            {% elsif page.url contains '/horseracing/' %}{{ '/assets/css/horseracing.css' | relative_url }}
+                            {% elsif page.url contains '/pokemon/' %}{{ '/assets/css/pokemon.css' | relative_url }}
+                            {% else %}{{ '/assets/css/default.css' | relative_url }}{% endif %}">
+</head>
+
+<body class="{% if page.url contains '/hockey/' %}hockey-theme
+             {% elsif page.url contains '/pokemon/' %}pokemon-theme
+             {% elsif page.url contains '/horseracing/' %}horseracing-theme
+             {% else %}default-theme
+             {% endif %}">
+
+  <main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
+    <div class="row">
+      <div class="{% if page.full-width %} col {% else %} col-xl-8 offset-xl-2 col-lg-10 offset-lg-1 {% endif %}">
+  
+        <!-- Title is already handled in header -->
+        <div class="blog-post">
+          {{ content }}
+        </div>
+
+        {% if page.tags.size > 0 %}
+          <div class="blog-tags">
+            <span>Tags:</span>
+            {% for tag in page.tags %}
+              <a href="{{ '/tags' | relative_url }}#{{- tag -}}">{{- tag -}}</a>
+            {% endfor %}
+          </div>
+        {% endif %}
+  
+        {% if page.social-share %}
+          {% include social-share.html %}
+        {% endif %}
+          
+          <ul class="pagination blog-pager">
+          <!--  {% if page.previous.url %}
+            <li class="page-item previous">
+              <a class="page-link" href="{{ page.previous.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.previous.title | strip_html | xml_escape}}">
+                <i class="fas fa-arrow-left" alt="Previous Post"></i>
+                <span class="d-none d-sm-inline-block">Previous Post</span>
+              </a>
+            </li>
+            {% endif %}-->
+          
+            <!-- Return to Posts Button -->
+            <li class="page-item next">
+              <a class="page-link" href="{{ site.baseurl }}{{ page.url | split: '/' | slice: 0, 2 | join: '/' }}" data-toggle="tooltip" data-placement="top" title="Return to Posts">
+                <span class="d-none d-sm-inline-block">Return to Posts</span>
+              </a>
+            </li>
+          </ul>
+        
+        {% include comments.html %}
+      </div>
+    </div>
+  </main>
+</body>

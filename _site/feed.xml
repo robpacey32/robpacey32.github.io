@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    
+    <title>Pacey32.com</title>
+    
+    
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    
+    
+      <item>
+        <title>Expected Goals Against Averages</title>
+        <description>
+          Working out how goalies would perform on other teams - 
+          
+
+Expected Goals Against:
+
+  
+
+
+#32
+
+
+        </description>
+        <pubDate>Sun, 23 Feb 2025 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/hockey/hockey2/</link>
+        <guid isPermaLink="true">http://localhost:4000/hockey/hockey2/</guid>
+      </item>
+    
+      <item>
+        <title>Horses 1</title>
+        <description>
+          Test1 - 
+          HORSERACING TEST 1 MD.
+
+
+        </description>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/horseracing/2025/02/22/horses1/</link>
+        <guid isPermaLink="true">http://localhost:4000/horseracing/2025/02/22/horses1/</guid>
+      </item>
+    
+      <item>
+        <title>2-1-0 or 3-3-1-0?</title>
+        <description>
+          NHL Standings Editor - 
+          With such a tight playoff race in the 2023-24 season, it got me wondering what would have happened if the NHL worked on the IIHF system of 3 points for a win, 2 for an OT win, 1 for an OT/SO loss and 0 for a regulation loss. The Bruins...
+        </description>
+        <pubDate>Sat, 22 Feb 2025 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/hockey/2025/02/22/StandingsEditor/</link>
+        <guid isPermaLink="true">http://localhost:4000/hockey/2025/02/22/StandingsEditor/</guid>
+      </item>
+    
+      <item>
+        <title>My Collection</title>
+        <description>
+          
+          TEXT ABOUT COLLECTION
+
+
+
+pokemon/assets/32pokemonLogo.png
+
+        </description>
+        <pubDate>Sat, 07 Mar 2020 00:00:00 +0000</pubDate>
+        <link>http://localhost:4000/pokemon/pokemon1/</link>
+        <guid isPermaLink="true">http://localhost:4000/pokemon/pokemon1/</guid>
+      </item>
+    
+  </channel>
+</rss>

@@ -73,6 +73,7 @@ layout: base
           </a>
         </li>
         {% endif %}
+        <!--
         {% if page.next.url %}
         <li class="page-item next">
           <a class="page-link" href="{{ page.next.url | relative_url }}" data-toggle="tooltip" data-placement="top" title="{{page.next.title | strip_html | xml_escape}}">
@@ -81,6 +82,14 @@ layout: base
           </a>
         </li>
         {% endif %}
+        -->
+        
+        <li class="page-item next">
+          <a class="page-link" href="{{ site.baseurl }}" data-toggle="tooltip" data-placement="top" title="Return to Homepage">
+            <span class="d-none d-sm-inline-block">Return to Homepage</span>
+            <i class="fas fa-home" alt="Return to Homepage"></i>
+          </a>
+        </li>
       </ul>
       {% include comments.html %}
     </div>

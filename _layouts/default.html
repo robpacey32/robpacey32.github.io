@@ -2,24 +2,57 @@
 layout: base
 ---
 
-<div class="intro-header"></div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  
+  <style>
+    :root {
+      --theme-color: {{ page.theme-color | default: "#FFFFFF" }};
+    }
 
-<main class="{% if page.full-width %} container-fluid {% else %} container-md {% endif %}">
-  {% if page.before-content %}
-    <div class="before-content">
-      {% for file in page.before-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
+  </style>
+</head>
+<body class="{% if page.url contains '/hockey/' %}hockey-theme
+             {% elsif page.url contains '/pokemon/' %}pokemon-theme
+             {% elsif page.url contains '/horseracing/' %}horseracing-theme
+             {% else %}default-theme
+             {% endif %}">
+  
+  <!-- Navigation and header -->
+  <header>
+    <nav>
+      <!-- Your navigation links here -->
+    </nav>
+  </header>
 
-  {{ content }}
+  <!-- Main content -->
+  <main class="{% if page.full-width %}container-fluid{% else %}container-md{% endif %}">
+    {% if page.before-content %}
+      <div class="before-content">
+        {% for file in page.before-content %}
+          {% include {{ file }} %}
+        {% endfor %}
+      </div>
+    {% endif %}
 
-  {% if page.after-content %}
-    <div class="after-content">
-      {% for file in page.after-content %}
-        {% include {{ file }} %}
-      {% endfor %}
-    </div>
-  {% endif %}
-</main>
+    {{ content }}
+
+    {% if page.after-content %}
+      <div class="after-content">
+        {% for file in page.after-content %}
+          {% include {{ file }} %}
+        {% endfor %}
+      </div>
+    {% endif %}
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <!-- Your footer content here -->
+  </footer>
+</body>
+</html>

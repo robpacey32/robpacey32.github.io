@@ -1,5 +1,4 @@
 <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom {% if page.nav-short %}top-nav-short-permanent{% else %}top-nav-regular{% endif %}">
-
   {%- if site.title-img -%}
     <a class="navbar-brand navbar-brand-logo" href="{{ '/' | absolute_url }}"><img alt="{{ site.title }} Logo" src="{{ site.title-img | relative_url}}"/></a>
   {%- elsif site.title -%}
@@ -13,23 +12,11 @@
   <div class="collapse navbar-collapse" id="main-navbar">
     <ul class="navbar-nav ml-auto">
       {%- for link in site.navbar-links -%}
-        {%- if link[1].first %}
-          <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ link[0] }}</a>
-            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-              {%- for childlink in link[1] -%}
-                {%- for linkparts in childlink %}
-                  <a class="dropdown-item" href="{{ linkparts[1] | relative_url }}">{{ linkparts[0] }}</a>
-                {%- endfor -%}
-              {%- endfor %}
-            </div>
-          </li>
-        {% else %}
-          <li class="nav-item">
-            <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
-          </li>
-        {%- endif -%}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ link[1] | relative_url }}">{{ link[0] }}</a>
+        </li>
       {%- endfor -%}
+
       {% if site.post_search %}
         <li class="nav-item">
           <a class="nav-link" id="nav-search-link" href="#" title="Search">
@@ -47,11 +34,23 @@
     {% endfor %}
   {% endif %}
 
-  {% if site.avatar and page.show-avatar != false %}
+  {% if page.url contains '/hockey' %}
+    {% assign avatar_path = '/hockey/assets/32Logo.png' %}
+  {% elsif page.url contains '/pokemon' %}
+    {% assign avatar_path = '/pokemon/assets/32pokemonLogo.png' %}
+  {% elsif page.url contains '/horseracing' %}
+    {% assign avatar_path = '/horseracing/assets/32horsesLogo.png' %}
+  {% elsif page.url contains '/aboutme' %}
+    {% assign avatar_path = '/aboutme/assets/32aboutLogo.png' %}
+  {% else %}
+    {% assign avatar_path = site.avatar %}
+  {% endif %}
+
+  {% if avatar_path and page.show-avatar != false %}
     <div class="avatar-container">
       <div class="avatar-img-border">
         <a href="{{ '/' | absolute_url }}">
-          <img alt="Navigation bar avatar" class="avatar-img" src="{{ site.avatar | relative_url }}" />
+          <img alt="Navigation bar avatar" class="avatar-img" src="{{ avatar_path | relative_url }}" />
         </a>
       </div>
     </div>

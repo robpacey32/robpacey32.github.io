@@ -1,0 +1,9 @@
+/* pokemon.css */
+body {
+    background-color: #FFD700; /* Yellow background for pokemon */
+    color: black;
+  }
+  
+  .pokemon-section {
+    background-color: #FFD700; /* Lighter yellow for the section */
+  }

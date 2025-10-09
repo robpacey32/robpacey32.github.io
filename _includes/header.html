@@ -16,7 +16,11 @@
   ></div>
 {% endif %}
 
-<header class="header-section {% if page.cover-img %}has-img{% endif %}">
+<header class="header-section {% if page.cover-img %}has-img{% endif %} 
+  {% if page.url contains '/hockey/' %} hockey-theme 
+  {% elsif page.url contains '/pokemon/' %} pokemon-theme 
+  {% elsif page.url contains '/horseracing/' %} horseracing-theme 
+  {% endif %}">
 <div class="intro-header {% if page.cover-img %} big-img {% endif %}">
   {% if page.cover-img or page.title %}
   <div class="container-md">

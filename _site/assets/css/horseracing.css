@@ -1,0 +1,9 @@
+/* horseracing.css */
+body {
+    background-color: #00661b; /* Blue background for hockey */
+    color: #000000;
+  }
+  
+  .hockey-section {
+    background-color: #00661b; /* Lighter blue for the section */
+  }
