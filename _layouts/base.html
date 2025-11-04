@@ -2,7 +2,6 @@
 common-css:
   - "/assets/css/bootstrap-social.css"
   - "/assets/css/beautifuljekyll.css"
-  - "/assets/css/consent-banner.css"  # Add your consent banner CSS here
 
 common-ext-css:
   - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
@@ -19,10 +18,6 @@ common-ext-js:
   - href: "https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
     sri: "sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
 
-common-js:
-  - "/assets/js/beautifuljekyll.js"
-  - "/assets/js/consent.js"  # Add the JS file to handle consent logic
-
 ---
 
 <!DOCTYPE html>
@@ -36,14 +31,6 @@ common-js:
   {% include nav.html %}
 
   {{ content }}
-
-  <!-- Cookie Consent Banner HTML -->
-  <div id="cookie-consent-dialog">
-    <div class="cookie-consent-content">
-      <p>We use cookies to improve your experience. By using our website, you agree to our cookie policy.</p>
-      <button id="accept-cookies">I Accept</button>
-    </div>
-  </div>
 
   {% include footer.html %}
 

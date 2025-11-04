@@ -1,0 +1,13 @@
+/* Ensure Osano consent banner sits above the navbar and stays at bottom */
+.cc-window {
+  z-index: 99999 !important; /* higher than any header/nav */
+  position: fixed !important;
+  bottom: 0 !important;
+  top: auto !important;
+}
+
+/* (Optional) make sure it's full-width on smaller screens */
+.cc-window.cc-bottom {
+  left: 0;
+  right: 0;
+}
