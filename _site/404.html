@@ -314,15 +314,25 @@
 <script>
 window.cookieconsent.initialise({
   palette: {
-    popup: { background: "#222" },
-    button: { background: "#f5c518", text: "#222" }
+    popup: {
+      background: "#444",   // grey background for the banner
+      text: "#ffffff"       // white text for readability
+    },
+    button: {
+      background: "#3a9bdc", // light blue for Accept
+      text: "#ffffff"
+    },
+    highlight: {
+      background: "#001f3f", // dark blue for Decline
+      text: "#ffffff"
+    }
   },
-  theme: "classic",
+  theme: "edgeless",
   type: "opt-in",
   content: {
     message: "This website uses cookies to improve your experience.",
-    dismiss: "Decline",
-    allow: "Accept",
+    dismiss: "Decline. ",
+    allow: "  Accept",
     link: "Learn more",
     href: "/privacy"
   },
