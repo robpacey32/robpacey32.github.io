@@ -30,27 +30,8 @@
   
 
   
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-J2C9X7Y3BX"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J2C9X7Y3BX');
-</script>
-
 
   
-  <!-- Google Tag Manager -->
-  <script>
-    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-      new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-      j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-      'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-    })(window,document,'script','dataLayer','GTM-MJRVCW4Q');
-  </script>
-  <!-- End Google Tag Manager -->
-
 
   
 
@@ -148,10 +129,6 @@
 
 <body>
   
-  <!-- Google Tag Manager (noscript) -->
-  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJRVCW4Q" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-  <!-- End Google Tag Manager (noscript) -->
-
 
 
   <nav class="navbar navbar-expand-xl navbar-light fixed-top navbar-custom top-nav-regular"><a class="navbar-brand navbar-brand-logo" href="http://localhost:4000/"><img alt="Pacey32.com Logo" src="/assets/img/homepage/32Logo.png"/></a><button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-navbar" aria-controls="main-navbar" aria-expanded="false" aria-label="Toggle navigation">
@@ -335,6 +312,33 @@
 
 <!-- ✅ Add the Osano Cookie Consent here -->
 <script src="https://cdn.jsdelivr.net/npm/cookieconsent@3/build/cookieconsent.min.js"></script>
+
+<!-- ✅ Define GA functions BEFORE Osano initialises -->
+<script>
+function enableAnalytics() {
+  if (window.analyticsEnabled) return; // prevent duplicates
+  window.analyticsEnabled = true;
+
+  // 👉 Replace G-XXXXXXX with your real Measurement ID
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.googletagmanager.com/gtag/js?id=G-J2C9X7Y3BX','ga');
+
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-J2C9X7Y3BX');
+
+  console.log("✅ Google Analytics enabled");
+}
+
+function disableAnalytics() {
+  console.log('🚫 Analytics disabled');
+}
+</script>
+
+<!-- ✅ Now initialise Osano after GA functions exist -->
 <script>
 window.cookieconsent.initialise({
   palette: {
@@ -355,8 +359,8 @@ window.cookieconsent.initialise({
   type: "opt-in",
   content: {
     message: "This website uses cookies to improve your experience.",
-    dismiss: "Decline. ",
-    allow: "  Accept",
+    dismiss: "Decline",
+    allow: "Accept",
     link: "Learn more",
     href: "/privacy"
   },
@@ -371,28 +375,6 @@ window.cookieconsent.initialise({
   }
 });
 </script>
-
-<script>
-function enableAnalytics() {
-  if (window.analyticsEnabled) return; // prevent duplicates
-  window.analyticsEnabled = true;
-
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX','ga');
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-J2C9X7Y3BX');
-}
-
-function disableAnalytics() {
-  console.log('Analytics disabled');
-}
-</script>
-
 
   
   
