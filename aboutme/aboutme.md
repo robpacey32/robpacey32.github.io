@@ -51,12 +51,17 @@ permalink: /aboutme/
 <div class="aboutme-text">
 Hi, I’m Rob — the person behind Pacey32.
 <br>
+<br>
 I’ve always been curious about how things work, and over time that curiosity turned into a love for data, analytics, and storytelling.
+<br>
 <br>
 By day I work in analytics for a global company. By night, I work on personal projects that bring together the things I enjoy most: sport, technology, and data.
 <br>
-Pacey32 is where everything is getting documented. It’s a space for exploring hockey stats, horse racing form, and Pokémon cards — but also for experimenting, learning, and sharing along the way.  
+<br>
+Pacey32 is where everything is getting documented. It’s a space for exploring hockey stats, horse racing form, and Pokémon cards — but also for experimenting, learning, and sharing along the way.
+<br>  
 Some projects are polished, others are in progress, but they all come from the same place: curiosity, creativity, and a desire to keep building.  
+<br>
 <br>
 Thanks for visitng — I hope something here sparks your own curiosity too.
 </div>
