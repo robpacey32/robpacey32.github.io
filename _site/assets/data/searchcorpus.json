@@ -82,6 +82,14 @@
 }, 
  
 { 
+"title"    : "Privacy Policy", 
+"desc"     : "Privacy Policy", 
+"category" : "page", 
+"url"      : "/privacy/", 
+"date"     : "January 1, 1970" 
+}, 
+ 
+{ 
 "title"    : "Tag Index", 
 "desc"     : "Tag Index", 
 "category" : "page", 
