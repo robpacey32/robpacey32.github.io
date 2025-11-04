@@ -79,3 +79,11 @@
   background-color: #ffffff !important;
   color: #444 !important;
 }
+
+/* Hide Osano's floating "Cookie Policy" reopen tab */
+.cc-revoke,
+.cc-revoke:hover,
+.cc-revoke.cc-bottom,
+.cc-revoke.cc-top {
+  display: none !important;
+}
